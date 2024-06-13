@@ -67,7 +67,7 @@ const Home = () => {
         </div>
         {error === true ? <p style={{textAlign:"center", marginTop:"20px"}}>No Data Found</p>: <TableContent displayCoin = {displayCoin} currency = {currency}/>}
       </div>
-      <Pagination allCoin={allCoin}/>
+      {allCoin.length !== 0 && <Pagination allCoin={allCoin}/>}
     </div>
     
   );
